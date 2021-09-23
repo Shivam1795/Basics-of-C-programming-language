@@ -1,7 +1,7 @@
 # Basics-of-C-programming-language
 **Basics of C programming language (Lab Sessions)**
 
-Lab1:
+**Lab1:**
 
   Ex11: Write a program to display “hello world” in C.
 
