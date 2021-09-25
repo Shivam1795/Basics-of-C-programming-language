@@ -1,7 +1,7 @@
 # Basics-of-C-programming-language
 **Basics of C programming language (Lab Sessions)**
 
-**Lab1:**
+**Lab1: To be familiar with different data types, Operators and Expressions in C.**
 
   Ex11: Write a program to display “hello world” in C.
 
