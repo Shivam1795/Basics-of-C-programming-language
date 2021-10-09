@@ -1,5 +1,5 @@
 # Basics-of-C-programming-language
-**Basics of C programming language (Lab Sessions)**
+**Basics of C programming language (Lab Sessions for Students)**
 
 **Lab1: To be familiar with different data types, Operators and Expressions in C.**
 
