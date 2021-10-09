@@ -1,4 +1,4 @@
-**Lab1: To be familiar with basic operators and expressions in C.** 
+**Lab1: To be familiar with most basic operations and expressions in C.** 
   
   Ex11: Write a program to display “hello world” in C.
 
