@@ -1,0 +1,215 @@
+
+Explanation: Print Pascal's triangle. (Input: Number of rows)
+
+
+Enter the number of rows: 1
+
+_ _ _1
+
+Enter the number of rows: 2
+
+_ _ _ _1
+
+_ _ _1_ _1
+
+Enter the number of rows: 3
+
+_ _ _ _ _1
+
+_ _ _ _1_ _1
+
+_ _ _1_ _2_ _1
+
+Enter the number of rows: 4
+
+           1
+
+         1   1
+
+       1   2   1
+
+     1   3   3   1
+
+Enter the number of rows: 5
+
+             1
+
+           1   1
+
+         1   2   1
+
+       1   3   3   1
+
+     1   4   6   4   1
+
+
+
+
+Examples:
+
+a).
+Enter the number of rows: 1
+
+_ _ _1
+
+
+Explain:
+
+rows = 1
+
+for(i = 0; i < rows(1) ==>> 1 time; ++i){
+
+	for(space=1; space <= rows-i (1) ==>> 1 time; space++){
+		print(first two space) ==>> o/p window ==>> "_ "{First two space}
+	}
+	
+	for(j=0; j <= i(0) ==>> 1 time; j++){
+		
+		1) i == 0 and j == 0:(if condition is True)
+			so, coef = 1
+			
+		printf("%4d", coef) ==>> o/p window ==>> "_ _ _1" {Five blank places and than 1}
+	}
+	
+	printf("\n\n") ==>> goto next to next line ==>> o/p window ==>> (_ _ _1'\n')
+								    	  ('\n')
+								   	  (.)			{. represent current position of "text cursor" here}
+	
+
+
+
+b).
+Enter the number of rows: 3
+
+_ _ _ _ _1
+
+_ _ _ _1_ _1
+
+_ _ _1_ _2_ _1
+
+
+
+Explain:
+
+rows = 3
+
+External loop represent rows ==>> run 3 time (i = 0; i = 1; i = 2) (condition i < rows & rows = 3)
+
+ITERATION 1:
+	
+	i = 0 {
+		
+		space = 1 to rows-i = 3
+		So,{
+		   space = 1 -->> Add two spaces (_ )
+		   space = 2 -->> Add two spaces (_ _ )
+		   space = 3 -->> Add two spaces (_ _ _ )
+		   
+		   ==>> Total 6 blank places added in first row.
+		   }
+		
+		j = 0 to i = 0 (Run 1 time)
+		So,{
+		   coef = 1 (if condition is True)
+		   Print 1 (coef) after 3 positions (at 4th). ==>> (_ _ _ _ _1) 
+		   }
+		   
+		printf("\n\n") ==>> Goto next to next line ==>> (_ _ _ _ _1'\n')
+							          ('\n')
+							          (.)			{. represent current position of "text cursor" here}
+		}
+
+ITERATION 2:
+
+	i = 1 {
+		
+		space = 1 to rows-i = 2
+		So,{
+		   space = 1 -->> Add two spaces (_ _ _ _ _1'\n')
+						  ('\n')
+						  (_ )
+						
+		   space = 2 -->> Add two spaces (_ _ _ _ _1'\n')
+						  ('\n')
+						  (_ _ )
+		   
+		   ==>> Total 4 blank places added in this row.
+		   }
+		
+		j = 0 to i = 1 (Run 2 time)
+		So,{
+		1) j = 0:
+		   coef = 1 (if condition is True)
+		   Print 1 (coef) after 3 positions (at 4th). ==>> (_ _ _ _ _1'\n')
+							              ('\n')
+							              (_ _ _ _1)
+		2) j = 1:
+		   coef = 1*(1-1+1)/1 = 1 (if condition is False)
+		   Print 1 (coef) after 3 positions (at 4th). ==>> (_ _ _ _ _1'\n')
+							             ('\n')
+							             (_ _ _ _1_ _1)				          
+		   }
+		   
+		printf("\n\n") ==>> Goto next to next line ==>> (_ _ _ _ _1'\n')
+							         ('\n')
+							         (_ _ _ _1_ _1'\n')
+							         ('\n')
+							         (.)			{. represent current position of "text cursor" here}
+		}
+		
+
+ITERATION 3:
+
+	i = 2 {
+		
+		space = 1 to rows-i = 1
+		So,{
+		   space = 1 -->> Add two spaces (_ _ _ _ _1'\n')
+						  ('\n')
+						  (_ _ _ _1_ _1'\n')
+						  ('\n')
+						  (_ )
+
+		   
+		   ==>> Total 2 blank places added in this row.
+		   }
+		
+		
+		j = 0 to i = 2 (Run 3 time)
+		So,{
+		1) j = 0:
+		   coef = 1 (if condition is True)
+		   Print 1 (coef) after 3 positions (at 4th). ==>> (_ _ _ _ _1'\n')
+							              ('\n')
+							              (_ _ _ _1_ _1'\n')
+							              ('\n')
+							              (_ _ _1)
+		2) j = 1:
+		   coef = 1*(2-1+1)/1 = 2 (if condition is False)
+		   Print 2 (coef) after 3 positions (at 4th). ==>> (_ _ _ _ _1'\n')
+							              ('\n')
+							              (_ _ _ _1_ _1'\n')
+							              ('\n')
+							              (_ _ _1_ _2)	
+							          
+		3) j = 2:
+		   coef = 1*(2-2+1)/1 = 1 (if condition is False)
+		   Print 1 (coef) after 3 positions (at 4th). ==>> (_ _ _ _ _1'\n')
+							              ('\n')
+							              (_ _ _ _1_ _1'\n')
+							              ('\n')
+							              (_ _ _1_ _2_ _1)			          
+		   }
+		   
+		printf("\n\n") ==>> Goto next to next line ==>> (_ _ _ _ _1'\n')
+							          ('\n')
+							          (_ _ _ _1_ _1'\n')
+							          ('\n')
+							          (_ _ _1_ _2_ _1'\n')
+							          ('\n')
+							          (.)			{. represent current position of "text cursor" here}
+		}
+		
+		
+
+
